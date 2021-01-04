@@ -1,3 +1,5 @@
+name: Download dummy stuff
+
 on:
   workflow_dispatch:
   schedule:
