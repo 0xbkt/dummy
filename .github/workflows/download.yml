@@ -1,0 +1,16 @@
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '*/10 * * * *'
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  dl:
+    runs-on: ubuntu-latest
+    env:
+      VOMIT_URL: ${{ secrets.VOMIT_URL }}
+    steps:
+      - run: aria2c --summary-interval=5 --file-allocation=falloc -x5 -s5 -j5 "$VOMIT_URL"
