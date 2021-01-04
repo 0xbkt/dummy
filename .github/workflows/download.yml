@@ -2,8 +2,6 @@ name: Download dummy stuff
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '*/10 * * * *'
 
 defaults:
   run:
