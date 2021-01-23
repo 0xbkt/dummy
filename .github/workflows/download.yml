@@ -13,4 +13,4 @@ jobs:
     env:
       VOMIT_URL: ${{ secrets.VOMIT_URL }}
     steps:
-      - run: aria2c --summary-interval=5 --file-allocation=falloc -x5 -s5 -j5 "$VOMIT_URL"
+      - run: aria2c --summary-interval=5 --file-allocation=none -x5 -s5 -j5 "$VOMIT_URL"
